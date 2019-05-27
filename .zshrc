@@ -114,7 +114,7 @@ alias size='f(){ du -sh $1* | sort -hr; }; f'
 alias vim-setup='vim ~/.vimrc'
 alias zsh-setup='vim ~/.zshrc'
 alias kitty-setup='vim ~/.config/kitty/kitty.conf'
-
+alias icat='kitty +kitten icat'
 
 # GRC
 [[ -s "/usr/local/etc/grc.zsh" ]] && source /usr/local/etc/grc.zsh
