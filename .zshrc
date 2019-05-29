@@ -69,7 +69,7 @@ plugins=(
   zsh-syntax-highlighting
 )
 
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#c7c7c7'
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#658494'
 
 source $ZSH/oh-my-zsh.sh
 
