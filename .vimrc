@@ -103,6 +103,15 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+
+" AutoLaunch NERDTree
+:autocmd VimEnter * 
+	\	if !argc() 
+	\ |		Startify 
+	\ |		NERDTree 
+	\ |		wincmd w 
+	\ | endif
+
 " Lightline configuration
 :set laststatus=2
 :let g:lightline = {
@@ -112,6 +121,11 @@ filetype plugin indent on    " required
 
 " macOS Fix
 :set backspace=indent,eol,start
+
+" UTF-8 Support
+:set fileencodings=utf-8,gbk,utf-16le,cp1252,iso-8859-15,ucs-bom
+:set termencoding=utf-8
+:set encoding=utf-8
 
 :syntax on
 :let java_highlight_all=1
