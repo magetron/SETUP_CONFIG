@@ -17,7 +17,13 @@ Plugin 'scrooloose/nerdtree'
 
 Plugin 'lervag/vimtex'
 
-Plugin 'itchyny/lightline.vim'
+Plugin 'vim-airline/vim-airline'
+
+Plugin 'vim-airline/vim-airline-themes'
+
+Plugin 'NLKNguyen/papercolor-theme'
+
+Plugin 'tpope/vim-fugitive'
 
 Plugin 'neovimhaskell/haskell-vim'
 
@@ -112,12 +118,9 @@ filetype plugin indent on    " required
 	\ |		wincmd w 
 	\ | endif
 
-" Lightline configuration
-:set laststatus=2
-:let g:lightline = {
-	\ 'colorscheme': 'material',
-	\ }
-:set noshowmode
+" Airline Customisation
+let g:airline_theme='papercolor'
+let g:airline_powerline_fonts=1
 
 " macOS Fix
 :set backspace=indent,eol,start
@@ -132,8 +135,8 @@ filetype plugin indent on    " required
 :let java_highlight_functions=1
 
 :set termguicolors
-:set background=dark
-:colorscheme material
+:set background=light
+:colorscheme PaperColor
 
 :set nu!
 :set ruler
