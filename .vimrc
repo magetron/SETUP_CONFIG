@@ -19,6 +19,14 @@ Plugin 'lervag/vimtex'
 
 Plugin 'itchyny/lightline.vim'
 
+" Plugin 'vim-airline/vim-airline'
+
+" Plugin 'vim-airline/vim-airline-themes'
+
+Plugin 'NLKNguyen/papercolor-theme'                                                         
+
+Plugin 'tpope/vim-fugitive'       
+
 Plugin 'neovimhaskell/haskell-vim'
 
 Plugin 'justinmk/vim-syntax-extra'
@@ -112,12 +120,17 @@ filetype plugin indent on    " required
 	\ |		wincmd w 
 	\ | endif
 
-" Lightline configuration
+" Ligtline configuration
 :set laststatus=2
 :let g:lightline = {
 	\ 'colorscheme': 'material',
 	\ }
 :set noshowmode
+
+
+" Airline Customistaion
+"let g:airline_theme='material'
+"let g:airline_powerline_fonts=1
 
 " macOS Fix
 :set backspace=indent,eol,start
