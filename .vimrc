@@ -29,6 +29,10 @@ Plugin 'tpope/vim-fugitive'
 
 Plugin 'neovimhaskell/haskell-vim'
 
+Plugin 'fatih/vim-go'
+let g:go_null_module_warning = 0
+let g:go_fmt_command = "gofmt"
+
 Plugin 'justinmk/vim-syntax-extra'
 
 Plugin '907th/vim-auto-save'
