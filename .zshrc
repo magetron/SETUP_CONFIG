@@ -116,6 +116,10 @@ alias zsh-setup='vim ~/.zshrc'
 alias kitty-setup='vim ~/.config/kitty/kitty.conf'
 alias icat='kitty +kitten icat'
 
+# pyenv
+if command -v pyenv 1>/dev/null 2>&1; then eval "$(pyenv init -)"; fi
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+
 # GRC
 [[ -s "/usr/local/etc/grc.zsh" ]] && source /usr/local/etc/grc.zsh
 
@@ -127,3 +131,4 @@ autoload -Uz compinit
 compinit
 
 kitty + complete setup zsh | source /dev/stdin
+
