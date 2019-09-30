@@ -132,3 +132,5 @@ compinit
 
 kitty + complete setup zsh | source /dev/stdin
 
+# opam configuration
+test -r /Users/patrick/.opam/opam-init/init.zsh && . /Users/patrick/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
