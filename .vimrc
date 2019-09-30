@@ -139,6 +139,11 @@ filetype plugin indent on    " required
 " macOS Fix
 :set backspace=indent,eol,start
 
+" Competitive programming
+map <F5> :<C-U>!clang++ -O2 --std=c++17 %:r.cc -o %:r.out && ./%:r.out<CR>
+map <F7> :<C-U>!clang++ -g --std=c++17 %:r.cc -o %:r.out && lldb ./%:r.out<CR>
+
+
 " UTF-8 Support
 :set fileencodings=utf-8,gbk,utf-16le,cp1252,iso-8859-15,ucs-bom
 :set termencoding=utf-8
