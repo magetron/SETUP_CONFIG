@@ -25,6 +25,10 @@ Plugin 'itchyny/lightline.vim'
 
 Plugin 'NLKNguyen/papercolor-theme'                                                         
 
+" Plugin 'ycm-core/YouCompleteMe'
+
+" Plugin 'dense-analysis/ale'
+
 Plugin 'tpope/vim-fugitive'       
 
 Plugin 'neovimhaskell/haskell-vim'
@@ -38,11 +42,7 @@ Plugin 'justinmk/vim-syntax-extra'
 Plugin '907th/vim-auto-save'
 let g:auto_save = 1  " enable AutoSave on Vim startup
 
-Plugin 'shime/vim-livedown'
-let g:livedown_autorun = 0
-let g:livedown_open = 1
-let g:livedown_port = 1337
-let g:livedown_browser = "safari"
+Plugin 'suan/vim-instant-markdown', {'rtp': 'after'}
 
 Plugin 'dhruvasagar/vim-table-mode'
 let g:table_mode_corner = '|'
