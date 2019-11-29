@@ -29,6 +29,10 @@ Plugin 'NLKNguyen/papercolor-theme'
 
 " Plugin 'dense-analysis/ale'
 
+Plugin 'xuhdev/vim-latex-live-preview'
+
+let g:livepreview_previewer = 'open -a Preview'
+
 Plugin 'tpope/vim-fugitive'       
 
 Plugin 'neovimhaskell/haskell-vim'
