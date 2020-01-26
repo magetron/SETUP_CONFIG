@@ -119,6 +119,14 @@ alias icat='kitty +kitten icat'
 # pyenv
 if command -v pyenv 1>/dev/null 2>&1; then eval "$(pyenv init -)"; fi
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+export PIP_REQUIRE_VIRTUALENV=true
+export PATH="$HOME/.poetry/bin:$PATH"
+gpip(){
+   PIP_REQUIRE_VIRTUALENV="" pip "$@"
+}
+gpip3(){
+   PIP_REQUIRE_VIRTUALENV="" pip3 "$@"
+}
 
 # GRC
 [[ -s "/usr/local/etc/grc.zsh" ]] && source /usr/local/etc/grc.zsh
@@ -134,3 +142,7 @@ kitty + complete setup zsh | source /dev/stdin
 
 # opam configuration
 test -r /Users/patrick/.opam/opam-init/init.zsh && . /Users/patrick/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
+# swift
+export TOOLCHAINS=swift
+
