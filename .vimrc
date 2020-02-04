@@ -143,6 +143,10 @@ filetype plugin indent on    " required
 " macOS Fix
 :set backspace=indent,eol,start
 
+" Markdown Spell Check
+:autocmd BufRead,BufNewFile *.md setlocal spell
+:autocmd BufRead,BufNewFile *.md set complete+=kspell
+
 " Competitive programming
 map <F5> :<C-U>!clang++ -O2 --std=c++17 %:r.cc -o %:r.out && ./%:r.out<CR>
 map <F7> :<C-U>!clang++ -g --std=c++17 %:r.cc -o %:r.out && lldb ./%:r.out<CR>
