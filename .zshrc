@@ -115,6 +115,7 @@ alias vim-setup='vim ~/.vimrc'
 alias zsh-setup='vim ~/.zshrc'
 alias kitty-setup='vim ~/.config/kitty/kitty.conf'
 alias icat='kitty +kitten icat'
+alias top='gotop'
 
 # pyenv
 if command -v pyenv 1>/dev/null 2>&1; then eval "$(pyenv init -)"; fi
