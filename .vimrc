@@ -33,6 +33,18 @@ Plugin 'xuhdev/vim-latex-live-preview'
 
 let g:livepreview_previewer = 'open -a Preview'
 
+" Track the engine.
+Plugin 'SirVer/ultisnips'
+
+" Snippets are separated from the engine. Add this if you want them:
+Plugin 'honza/vim-snippets'
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
 Plugin 'tpope/vim-fugitive'       
 
 Plugin 'neovimhaskell/haskell-vim'
@@ -146,6 +158,10 @@ filetype plugin indent on    " required
 " Markdown Spell Check
 :autocmd BufRead,BufNewFile *.md setlocal spell
 :autocmd BufRead,BufNewFile *.md set complete+=kspell
+
+" Tex Spell Check
+:autocmd BufRead,BufNewFile *.tex setlocal spell
+:autocmd BufRead,BufNewFile *.tex set complete+=kspell
 
 " Competitive programming
 map <F5> :<C-U>!clang++ -O2 --std=c++17 %:r.cc -o %:r.out && ./%:r.out<CR>
