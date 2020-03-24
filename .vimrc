@@ -80,7 +80,7 @@ let g:ascii = [
   \ '                                            ',
   \ '============================================',
   \ '                                            ',
-  \ 'Copyright Patrick Wu, 2018 - 2019           '
+  \ 'Copyright Patrick Wu, 1999 - 2020           '
   \ ]
 let g:startify_custom_footer = 'map(startify#fortune#boxed() + g:ascii, "\"   \".v:val")'
 let g:startify_session_autoload = 1
