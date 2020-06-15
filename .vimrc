@@ -29,6 +29,8 @@ Plugin 'NLKNguyen/papercolor-theme'
 
 " Plugin 'dense-analysis/ale'
 
+Plugin 'cazador481/vim-systemverilog'
+
 Plugin 'xuhdev/vim-latex-live-preview'
 
 let g:livepreview_previewer = 'open -a Preview'
