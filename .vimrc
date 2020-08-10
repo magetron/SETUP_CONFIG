@@ -166,8 +166,8 @@ filetype plugin indent on    " required
 :autocmd BufRead,BufNewFile *.tex set complete+=kspell
 
 " Competitive programming
-map <F5> :<C-U>!clang++ -O2 --std=c++17 %:r.cc -o %:r.out && ./%:r.out<CR>
-map <F7> :<C-U>!clang++ -g --std=c++17 %:r.cc -o %:r.out && lldb ./%:r.out<CR>
+map <F5> :<C-U>!g++-9 -O2 --std=c++17 %:r.cc -o %:r.out && ./%:r.out<CR>
+map <F7> :<C-U>!g++-9 -g --std=c++17 %:r.cc -o %:r.out && lldb ./%:r.out<CR>
 
 
 " UTF-8 Support
