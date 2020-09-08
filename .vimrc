@@ -23,7 +23,7 @@ Plugin 'itchyny/lightline.vim'
 
 " Plugin 'vim-airline/vim-airline-themes'
 
-Plugin 'NLKNguyen/papercolor-theme'                                                         
+Plugin 'NLKNguyen/papercolor-theme'
 
 " Plugin 'ycm-core/YouCompleteMe'
 
@@ -46,8 +46,7 @@ let g:UltiSnipsExpandTrigger="<tab>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
-
-Plugin 'tpope/vim-fugitive'       
+Plugin 'tpope/vim-fugitive'
 
 Plugin 'neovimhaskell/haskell-vim'
 
@@ -57,32 +56,36 @@ let g:go_fmt_command = "gofmt"
 
 Plugin 'justinmk/vim-syntax-extra'
 
+
 Plugin '907th/vim-auto-save'
 let g:auto_save = 1  " enable AutoSave on Vim startup
 
 Plugin 'suan/vim-instant-markdown', {'rtp': 'after'}
+
+Plugin 'ntpeters/vim-better-whitespace'
+let g:better_whitespace_guicolor = 'Green'
 
 Plugin 'dhruvasagar/vim-table-mode'
 let g:table_mode_corner = '|'
 
 Plugin 'mhinz/vim-startify'
 let g:startify_custom_header = [
-  \ '                                ______      ',
-  \ '            __                /\  ____`\    ',
-  \ '   __   __ /\_\    ___ ___    \ \ \___\ \   ',
-  \ '  /\ \ /\ \\/\ \ /` __` __`\   \ \  ____ \  ',
-  \ '  \ \ \_/ / \ \ \/\ \/\ \/\ \   \ \ \___\ \ ',
+  \ '                                ______',
+  \ '            __                /\  ____`\',
+  \ '   __   __ /\_\    ___ ___    \ \ \___\ \',
+  \ '  /\ \ /\ \\/\ \ /` __` __`\   \ \  ____ \',
+  \ '  \ \ \_/ / \ \ \/\ \/\ \/\ \   \ \ \___\ \',
   \ '   \ \___/   \ \_\ \_\ \_\ \_\   \ \_______\',
   \ '    \/__/     \/_/\/_/\/_/\/_/    \/_______/',
-  \ '                                            ',
+  \ '',
   \ '  ==========================================',
-  \ '                                            ',
+  \ '',
   \ ]
 let g:ascii = [
-  \ '                                            ',
+  \ '',
   \ '============================================',
-  \ '                                            ',
-  \ 'Copyright Patrick Wu, 1999 - 2020           '
+  \ '',
+  \ 'Copyright Patrick Wu, 1999 - 2020'
   \ ]
 let g:startify_custom_footer = 'map(startify#fortune#boxed() + g:ascii, "\"   \".v:val")'
 let g:startify_session_autoload = 1
@@ -135,11 +138,11 @@ filetype plugin indent on    " required
 
 
 " AutoLaunch NERDTree
-:autocmd VimEnter * 
-	\	if !argc() 
-	\ |		Startify 
-	\ |		NERDTree 
-	\ |		wincmd w 
+:autocmd VimEnter *
+	\	if !argc()
+	\ |		Startify
+	\ |		NERDTree
+	\ |		wincmd w
 	\ | endif
 
 " Ligtline configuration
@@ -169,7 +172,6 @@ filetype plugin indent on    " required
 map <F5> :<C-U>!g++-9 -O2 --std=c++17 %:r.cc -o %:r.out && ./%:r.out<CR>
 map <F7> :<C-U>!g++-9 -g --std=c++17 %:r.cc -o %:r.out && lldb ./%:r.out<CR>
 
-
 " UTF-8 Support
 :set fileencodings=utf-8,gbk,utf-16le,cp1252,iso-8859-15,ucs-bom
 :set termencoding=utf-8
@@ -186,8 +188,9 @@ map <F7> :<C-U>!g++-9 -g --std=c++17 %:r.cc -o %:r.out && lldb ./%:r.out<CR>
 :set nu!
 :set ruler
 :set tabstop=4
-
+:set colorcolumn=80
 :set mouse=a
 :set autoindent
 :set shiftwidth=4
+:set expandtab
 :set incsearch
