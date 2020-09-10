@@ -1,5 +1,9 @@
 #!/bin/zsh
 
+set -x
+
+cp -r .zsh ~/.zsh
+
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 echo 'source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh' >> ${ZDOTDIR:-$HOME}/.zshrc
 
@@ -9,6 +13,7 @@ echo "source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZD
 echo "autoload -Uz compinit" >> ${ZDOTDIR:-$HOME}/.zshrc
 echo "compinit" >> ${ZDOTDIR:-$HOME}/.zshrc
 echo "zstyle ':completion:*' menu select" >> ${ZDOTDIR:-$HOME}/.zshrc
+
 echo "source ~/.zsh/agnoster-patrick.zsh-theme" >> ${ZDOTDIR:-$HOME}/.zshrc
 
 echo "alias size='f(){ du -sh $1* | sort -hr; }; f'" >> ${ZDOTDIR:-$HOME}/.zshrc
