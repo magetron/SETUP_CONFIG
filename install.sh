@@ -2,9 +2,11 @@
 
 set -x
 
-cp -r .zsh     ~/.zsh
-cp .vimrc      ~/.vimrc
-cp .gitconfig  ~/.gitconfig
+cp -r .zsh        ~/.zsh
+cp -r .vim        ~/.vim
+cp -r .tmux.conf  ~/.tmux.conf
+cp .vimrc         ~/.vimrc
+cp .gitconfig     ~/.gitconfig
 
 rm -rf ${ZDOTDIR:-$HOME}/.zshrc
 

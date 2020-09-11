@@ -4,6 +4,8 @@
 :filetype plugin on
 :set omnifunc=syntaxcomplete#Complete
 
+:colorscheme material
+
 " Markdown Spell Check
 :autocmd BufRead,BufNewFile *.md setlocal spell
 :autocmd BufRead,BufNewFile *.md set complete+=kspell
