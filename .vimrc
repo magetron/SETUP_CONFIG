@@ -19,8 +19,6 @@ map <F7> :<C-U>!g++-9 -g --std=c++17 %:r.cc -o %:r.out && lldb ./%:r.out<CR>
 :let java_highlight_all=1
 :let java_highlight_functions=1
 
-:set termguicolors
-
 :set nu!
 :set ruler
 :set tabstop=2

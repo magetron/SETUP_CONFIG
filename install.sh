@@ -3,6 +3,7 @@
 set -x
 
 cp -r .zsh ~/.zsh
+cp .vimrc ~/.vimrc
 
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 echo 'source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh' >> ${ZDOTDIR:-$HOME}/.zshrc
