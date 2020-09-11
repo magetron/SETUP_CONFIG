@@ -59,6 +59,35 @@ prompt_end() {
 # Each component will draw itself, and hide itself if no information needs to be shown
 
 # Git: branch/detached head, dirty status
+# Checks if working tree is dirty
+function parse_git_dirty() {
+  local STATUS
+  local -a FLAGS
+  FLAGS=('--porcelain')
+  if [[ "$(__git_prompt_git config --get oh-my-zsh.hide-dirty)" != "1" ]]; then
+    if [[ "${DISABLE_UNTRACKED_FILES_DIRTY:-}" == "true" ]]; then
+      FLAGS+='--untracked-files=no'
+    fi
+    case "${GIT_STATUS_IGNORE_SUBMODULES:-}" in
+      git)
+        # let git decide (this respects per-repo config in .gitmodules)
+        ;;
+      *)
+        # if unset: ignore dirty submodules
+        # other values are passed to --ignore-submodules
+        FLAGS+="--ignore-submodules=${GIT_STATUS_IGNORE_SUBMODULES:-dirty}"
+        ;;
+    esac
+    STATUS=$(__git_prompt_git status ${FLAGS} 2> /dev/null | tail -n1)
+  fi
+  if [[ -n $STATUS ]]; then
+    echo "$ZSH_THEME_GIT_PROMPT_DIRTY"
+  else
+    echo "$ZSH_THEME_GIT_PROMPT_CLEAN"
+  fi
+}
+
+
 prompt_git() {
   local ref dirty
   if $(git rev-parse --is-inside-work-tree >/dev/null 2>&1); then
@@ -222,5 +251,5 @@ build_prompt() {
   prompt_end
 }
 
-PROMPT="%{%f%b%k%}$(build_prompt)
-$(prompt_next_line) "
+PROMPT='%{%f%b%k%}$(build_prompt)
+$(prompt_next_line) '
