@@ -24,6 +24,7 @@ map <F7> :<C-U>!g++-9 -g --std=c++17 %:r.cc -o %:r.out && lldb ./%:r.out<CR>
 :set tabstop=2
 :set colorcolumn=80
 :set mouse=a
+:set cindent
 :set autoindent
 :set shiftwidth=2
 :set expandtab

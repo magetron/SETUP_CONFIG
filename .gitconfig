@@ -1,0 +1,10 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = Patrick Wu
+	email = magetron1@gmail.com
+	signingkey = 73C3B9522B1A1EC9
+[credential]
+	helper = store
+[commit]
+	gpgsign = true
