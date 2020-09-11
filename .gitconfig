@@ -8,3 +8,5 @@
 	helper = store
 [commit]
 	gpgsign = true
+[gpg]
+	program = gpg2
