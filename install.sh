@@ -25,6 +25,9 @@ echo "zstyle ':completion:*' menu select" >> ${ZDOTDIR:-$HOME}/.zshrc
 echo "source ~/.zsh/agnoster-patrick.zsh-theme" >> ${ZDOTDIR:-$HOME}/.zshrc
 echo "setopt prompt_subst" >> ${ZDOTDIR:-$HOME}/.zshrc
 
+echo 'bindkey "^[b" forward-word' >> ${ZDOTDIR:-$HOME}/.zshrc
+echo 'bindkey "^[f" backward-word' >> ${ZDOTDIR:-$HOME}/.zshrc
+
 echo "alias gst='git status'" >> ${ZDOTDIR:-$HOME}/.zshrc
 echo "alias size='f(){ du -sh $1* | sort -hr; }; f'" >> ${ZDOTDIR:-$HOME}/.zshrc
 echo 'export GPG_TTY=$(tty)' >> ${ZDOTDIR:-$HOME}/.zshrc
