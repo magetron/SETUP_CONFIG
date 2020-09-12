@@ -20,6 +20,10 @@ mkdir -p ~/.zsh/git/
 wget -O ~/.zsh/git/git.zsh https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/lib/git.zsh
 echo "source ~/.zsh/git/git.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
 
+mkdir -p ~/.zsh/z/
+wget -O ~/.zsh/z/z.sh https://raw.githubusercontent.com/rupa/z/master/z.sh
+echo "source ~/.zsh/z/z.sh" >> ${ZDOTDIR:-$HOME}/.zshrc
+
 echo "autoload -Uz compinit" >> ${ZDOTDIR:-$HOME}/.zshrc
 echo "compinit" >> ${ZDOTDIR:-$HOME}/.zshrc
 echo "zstyle ':completion:*' menu select" >> ${ZDOTDIR:-$HOME}/.zshrc
