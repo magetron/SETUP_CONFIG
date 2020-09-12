@@ -1,0 +1,12 @@
+{
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Material Theme",
+    "editor.rulers": [
+        80
+    ],
+    "editor.fontFamily": "DejaVu Sans Mono for Powerline, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontSize": 16,
+    "terminal.integrated.fontFamily": "DejaVu Sans Mono for Powerline",
+    "editor.find.cursorMoveOnType": false,
+    "editor.cursorBlinking": "expand"
+}
