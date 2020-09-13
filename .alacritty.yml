@@ -3,6 +3,9 @@ font:
     family: DejaVu Sans Mono for Powerline
   size: 16.0
 
+window:
+  title: patrick-terminal
+
 colors:
   primary:
     background: '0x263238'
