@@ -14,8 +14,8 @@
 :autocmd BufRead,BufNewFile *.tex set complete+=kspell
 
 " Competitive programming
-map <F5> :<C-U>!g++-9 -O2 --std=c++17 %:r.cc -o %:r.out && ./%:r.out<CR>
-map <F7> :<C-U>!g++-9 -g --std=c++17 %:r.cc -o %:r.out && lldb ./%:r.out<CR>
+map <F5> :<C-U>!g++ -O2 --std=c++17 %:r.cc -o %:r.out && ./%:r.out<CR>
+map <F7> :<C-U>!g++ -g --std=c++17 %:r.cc -o %:r.out && lldb ./%:r.out<CR>
 
 " Trailing whitespaces
 highlight ExtraWhitespace ctermbg=red guibg=red
