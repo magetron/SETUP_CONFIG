@@ -31,8 +31,8 @@ echo "zstyle ':completion:*' menu select" >> ${ZDOTDIR:-$HOME}/.zshrc
 echo "source ~/.zsh/agnoster-patrick.zsh-theme" >> ${ZDOTDIR:-$HOME}/.zshrc
 echo "setopt prompt_subst" >> ${ZDOTDIR:-$HOME}/.zshrc
 
-echo 'bindkey "^[f" forward-word' >> ${ZDOTDIR:-$HOME}/.zshrc
-echo 'bindkey "^[b" backward-word' >> ${ZDOTDIR:-$HOME}/.zshrc
+echo 'bindkey "^[[1;3C" forward-word' >> ${ZDOTDIR:-$HOME}/.zshrc
+echo 'bindkey "^[[1;3D" backward-word' >> ${ZDOTDIR:-$HOME}/.zshrc
 
 echo "ZSH_THEME_GIT_PROMPT_DIRTY=' '" >> ${ZDOTDIR:-$HOME}/.zshrc
 echo "alias gst='git status'" >> ${ZDOTDIR:-$HOME}/.zshrc
