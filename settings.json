@@ -8,5 +8,10 @@
     "editor.fontSize": 16,
     "terminal.integrated.fontFamily": "DejaVu Sans Mono for Powerline",
     "editor.find.cursorMoveOnType": false,
-    "editor.cursorBlinking": "expand"
+    "editor.cursorBlinking": "expand",
+    "editor.detectIndentation": false,
+    "editor.insertSpaces": true,
+		"editor.tabSize": 2,
+		"editor.suggestSelection": "first",
+		"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
 }
