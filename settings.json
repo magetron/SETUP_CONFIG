@@ -11,7 +11,7 @@
     "editor.cursorBlinking": "expand",
     "editor.detectIndentation": false,
     "editor.insertSpaces": true,
-		"editor.tabSize": 2,
-		"editor.suggestSelection": "first",
-		"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
+    "editor.tabSize": 2,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
 }
