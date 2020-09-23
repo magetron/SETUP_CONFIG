@@ -1,7 +1,5 @@
 #!/bin/zsh
 
-set -x
-
 cp -r .zsh        ~/.zsh
 cp -r .vim        ~/.vim
 cp -r .tmux.conf  ~/.tmux.conf
@@ -43,3 +41,22 @@ echo "HISTFILE=~/.zsh_history" >> ${ZDOTDIR:-$HOME}/.zshrc
 echo "HISTSIZE=2147483647" >> ${ZDOTDIR:-$HOME}/.zshrc
 echo "SAVEHIST=2147483647" >> ${ZDOTDIR:-$HOME}/.zshrc
 echo "setopt appendhistory" >> ${ZDOTDIR:-$HOME}/.zshrc
+
+echo -n "install gcc/g++?"
+read INSTALLGCC
+if [[ $INSTALLGCC =~ ^[Yy]$ ]] then
+  sudo dnf install make automake gcc gcc-c++ kernel-devel
+fi
+
+echo -n "install java?"
+read INSTALLJAVA
+if [[ $INSTALLJAVA =~ ^[Yy]$ ]] then
+  sudo dnf install java-1.8.0-openjdk-devel java-11-openjdk-devel java-latest-openjdk-devel
+  echo "export JAVA_HOME=$(dirname $(dirname $(readlink $(readlink $(which javac)))))" >> ${ZDOTDIR:-$HOME}/.zshrc
+fi
+
+echo -n "install latex?"
+read INSTALLLATEX
+if [[ $INSTALLLATEX =~ ^[Yy]$ ]] then
+  sudo dnf install texlive-scheme-full google-noto-cjk-fonts
+fi
