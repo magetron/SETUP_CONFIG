@@ -9,9 +9,14 @@
 " Markdown Spell Check
 :autocmd BufRead,BufNewFile *.md setlocal spell
 :autocmd BufRead,BufNewFile *.md set complete+=kspell
+:autocmd BufRead,BufNewFile *.md hi clear SpellBad
+:autocmd BufRead,BufNewFile *.md hi SpellBad cterm=underline,bold ctermfg=red
 " Tex Spell Check
 :autocmd BufRead,BufNewFile *.tex setlocal spell
 :autocmd BufRead,BufNewFile *.tex set complete+=kspell
+:autocmd BufRead,BufNewFile *.tex hi clear SpellBad
+:autocmd BufRead,BufNewFile *.tex hi SpellBad cterm=underline,bold ctermfg=red
+
 
 " Competitive programming
 map <F5> :<C-U>!g++ -O2 --std=c++17 %:r.cc -o %:r.out && ./%:r.out<CR>
