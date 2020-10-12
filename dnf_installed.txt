@@ -1,5 +1,6 @@
 authselect-compat
 automake
+buildah
 clang
 fuse-sshfs
 gcc
@@ -17,15 +18,19 @@ kernel-devel
 libasan
 make
 maven
-moby-engine
 neofetch
 open-vm-tools-desktop
+podman
+skopeo
 texlive-scheme-full
 the_silver_searcher
 tig
 tldr
 tmux
 trash-cli
+verilator
 vim-enhanced
 xfsprogs
+xorg-x11-apps
+xorg-x11-xauth
 zsh
