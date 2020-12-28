@@ -44,7 +44,13 @@ echo 'export GPG_TTY=$(tty)' >> ${ZDOTDIR:-$HOME}/.zshrc
 echo "HISTFILE=~/.zsh_history" >> ${ZDOTDIR:-$HOME}/.zshrc
 echo "HISTSIZE=2147483647" >> ${ZDOTDIR:-$HOME}/.zshrc
 echo "SAVEHIST=2147483647" >> ${ZDOTDIR:-$HOME}/.zshrc
-echo "setopt appendhistory" >> ${ZDOTDIR:-$HOME}/.zshrc
+echo "HISTTIMEFORMAT=\"[%F %T] \"" >> ${ZDOTDIR:-$HOME}/.zshrc
+echo "setopt extended_history" >> ${ZDOTDIR:-$HOME}/.zshrc
+echo "setopt share_history" >> ${ZDOTDIR:-$HOME}/.zshrc
+echo "setopt extended_history" >> ${ZDOTDIR:-$HOME}/.zshrc
+echo "setopt hist_ignore_dups" >> ${ZDOTDIR:-$HOME}/.zshrc
+echo "setopt hist_expire_dups_first" >> ${ZDOTDIR:-$HOME}/.zshrc
+echo "setopt hist_verify" >> ${ZDOTDIR:-$HOME}/.zshrc
 
 echo -n "install gcc/g++?"
 read INSTALLGCC
