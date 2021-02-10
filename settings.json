@@ -13,5 +13,16 @@
     "editor.insertSpaces": true,
     "editor.tabSize": 2,
     "editor.suggestSelection": "first",
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 60,
+    "files.insertFinalNewline": true,
+    "[c]": {
+      "editor.wordBasedSuggestions": false,
+      "editor.suggest.insertMode": "replace",
+      "editor.semanticHighlighting.enabled": true
+    },
+    "C_Cpp.clang_format_sortIncludes": true,
+    "python.languageServer": "Pylance",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
 }
+
