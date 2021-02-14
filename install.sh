@@ -26,6 +26,8 @@ git clone https://github.com/powerline/fonts.git
 cd fonts && ./install.sh
 cd .. && rm -rf fonts
 
+echo "export EDITOR=vim" >> ${ZDOTDIR:-$HOME}/.zshrc
+
 echo "autoload -Uz compinit" >> ${ZDOTDIR:-$HOME}/.zshrc
 echo "compinit" >> ${ZDOTDIR:-$HOME}/.zshrc
 echo "zstyle ':completion:*' menu select" >> ${ZDOTDIR:-$HOME}/.zshrc
