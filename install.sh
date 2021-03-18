@@ -54,20 +54,20 @@ echo "setopt hist_ignore_dups" >> ${ZDOTDIR:-$HOME}/.zshrc
 echo "setopt hist_expire_dups_first" >> ${ZDOTDIR:-$HOME}/.zshrc
 echo "setopt hist_verify" >> ${ZDOTDIR:-$HOME}/.zshrc
 
-echo -n "install gcc/g++?"
+echo -n "install gcc/g++?[y/n]"
 read INSTALLGCC
 if [[ $INSTALLGCC =~ ^[Yy]$ ]] then
   sudo dnf install make automake gcc gcc-c++ kernel-devel
 fi
 
-echo -n "install java?"
+echo -n "install java?[y/n]"
 read INSTALLJAVA
 if [[ $INSTALLJAVA =~ ^[Yy]$ ]] then
   sudo dnf install java-1.8.0-openjdk-devel java-11-openjdk-devel java-latest-openjdk-devel
   echo "export JAVA_HOME=$(dirname $(dirname $(readlink $(readlink $(which javac)))))" >> ${ZDOTDIR:-$HOME}/.zshrc
 fi
 
-echo -n "install latex?"
+echo -n "install latex?[y/n]"
 read INSTALLLATEX
 if [[ $INSTALLLATEX =~ ^[Yy]$ ]] then
   sudo dnf install texlive-scheme-full google-noto-cjk-fonts
