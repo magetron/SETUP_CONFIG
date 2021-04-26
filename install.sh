@@ -32,6 +32,13 @@ echo "autoload -Uz compinit" >> ${ZDOTDIR:-$HOME}/.zshrc
 echo "compinit" >> ${ZDOTDIR:-$HOME}/.zshrc
 echo "zstyle ':completion:*' menu select" >> ${ZDOTDIR:-$HOME}/.zshrc
 
+echo "autoload -U history-search-end" >> ${ZDOTDIR:-$HOME}/.zshrc
+echo "zle -N history-beginning-search-backward-end history-search-end" >> ${ZDOTDIR:-$HOME}/.zshrc
+echo "zle -N history-beginning-search-forward-end history-search-end" >> ${ZDOTDIR:-$HOME}/.zshrc
+echo 'bindkey "^[[A" history-beginning-search-backward-end' >> ${ZDOTDIR:-$HOME}/.zshrc
+echo 'bindkey "^[[B" history-beginning-search-forward-end' >> ${ZDOTDIR:-$HOME}/.zshrc
+
+
 echo "source ~/.zsh/agnoster-patrick.zsh-theme" >> ${ZDOTDIR:-$HOME}/.zshrc
 echo "setopt prompt_subst" >> ${ZDOTDIR:-$HOME}/.zshrc
 
