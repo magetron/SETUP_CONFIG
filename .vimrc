@@ -17,10 +17,14 @@
 :autocmd BufRead,BufNewFile *.tex hi clear SpellBad
 :autocmd BufRead,BufNewFile *.tex hi SpellBad cterm=underline,bold ctermfg=red
 
+" Key mappings
+" Append <CR> for execution without checking
 
 " Competitive programming
-map <F5> :<C-U>!g++ -O2 --std=c++17 %:r.cc -o %:r.out && ./%:r.out<CR>
-map <F7> :<C-U>!g++ -g --std=c++17 %:r.cc -o %:r.out && lldb ./%:r.out<CR>
+map <F5> :<C-U>!g++ -O2 --std=c++17 %:r.cc -o %:r.out && ./%:r.out
+map <F7> :<C-U>!g++ -g --std=c++17 %:r.cc -o %:r.out && lldb ./%:r.out
+" Assembly programming
+map <F6> :<C-U>!nasm -f bin %:r.asm -o %:r.bin && qemu-system-x86_64 %:r.bin
 
 " Trailing whitespaces
 highlight ExtraWhitespace ctermbg=red guibg=red
